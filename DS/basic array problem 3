@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int n = 6;
+    int arr[] = {25, 67, 12, 90, 33, 8};
+
+    int max = arr[0], min = arr[0];
+
+    for(int i = 1; i < n; i++) {
+        if(arr[i] > max) max = arr[i];
+        if(arr[i] < min) min = arr[i];
+    }
+    printf("Largest element = %d\n", max);
+    printf("Smallest element = %d\n", min);
+    return 0;
+}
