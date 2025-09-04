@@ -1,0 +1,19 @@
+#include <stdio.h>
+int linearSearch(int arr[], int n, int target, int index) {
+    if (index >= n) 
+        return -1; // base case
+    if (arr[index] == target) 
+        return index;
+    return linearSearch(arr, n, target, index + 1); // recursive call
+}
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int n = 5;
+    int target = 40;
+    int result = linearSearchRec(arr, n, target, 0);
+    if (result != -1)
+        printf("Element found at index %d\n", result);
+    else
+        printf("Element not found\n");
+    return 0;
+}
